@@ -21,13 +21,13 @@ plt.plot(durations_df['years'], durations_df['durations'])
 
 plt.title('Netflix Movie Durations 2011-2020')
 
-plt.savefig('Netflix Movie Durations 2011-2020.png')
+plt.savefig('Python\\Are Netflix movies getting shorter\\Netflix Movie Durations 2011-2020.png')
 
-netflix_df = pd.read_csv('datasets/netflix_data.csv', index_col=0)
+netflix_df = pd.read_csv("Python\\Are Netflix movies getting shorter\\datasets\\netflix_data.csv", index_col=0)
 
 print(netflix_df.head())
 
-netflix_df_movies_only = netflix_df[netflix_df['type'] == 'Movie']
+netflix_df_movies_only = netflix_df[netflix_df["type"] == 'Movie']
 
 netflix_movies_col_subset = pd.DataFrame(netflix_df_movies_only, columns=['title', 'country', 'genre', 'release_year', 'duration'])
 
